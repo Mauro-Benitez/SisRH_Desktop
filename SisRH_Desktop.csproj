@@ -47,11 +47,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="f_Automacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Automacoes.Designer.cs">
+      <DependentUpon>f_Automacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_CadColaborador1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_CadColaborador1.Designer.cs">
+      <DependentUpon>f_CadColaborador1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_CadColaborador2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_CadColaborador2.Designer.cs">
+      <DependentUpon>f_CadColaborador2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_CriarAutomacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_CriarAutomacoes.Designer.cs">
+      <DependentUpon>f_CriarAutomacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_EmitirHolerite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_EmitirHolerite.Designer.cs">
+      <DependentUpon>f_EmitirHolerite.cs</DependentUpon>
+    </Compile>
     <Compile Include="f_Perfil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="f_Perfil.Designer.cs">
       <DependentUpon>f_Perfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Relatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Relatorio.Designer.cs">
+      <DependentUpon>f_Relatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Taxas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Taxas.Designer.cs">
+      <DependentUpon>f_Taxas.cs</DependentUpon>
     </Compile>
     <Compile Include="f_TelaInicial.cs">
       <SubType>Form</SubType>
@@ -67,8 +109,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="f_Automacoes.resx">
+      <DependentUpon>f_Automacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_CadColaborador1.resx">
+      <DependentUpon>f_CadColaborador1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_CadColaborador2.resx">
+      <DependentUpon>f_CadColaborador2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_CriarAutomacoes.resx">
+      <DependentUpon>f_CriarAutomacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_EmitirHolerite.resx">
+      <DependentUpon>f_EmitirHolerite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="f_Perfil.resx">
       <DependentUpon>f_Perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Relatorio.resx">
+      <DependentUpon>f_Relatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Taxas.resx">
+      <DependentUpon>f_Taxas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f_TelaInicial.resx">
       <DependentUpon>f_TelaInicial.cs</DependentUpon>
@@ -100,64 +163,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\iconCFG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\iconCFG32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\iconCFG30x30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\iconCFG24x24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_logout_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_logout_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_colaboradores_128.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_colaboradores_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_automacao_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_relatorio_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_relat_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_taxas_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_perfil 32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_config_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_config_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_logout_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_perfil_108.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\logo_320.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\icon_search_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
