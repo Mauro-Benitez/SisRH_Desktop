@@ -117,44 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icon_relat_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_relat_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_search_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_search_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_config_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_config_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_colaboradores_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_colaboradores_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_taxas_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_taxas_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_perfil 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_perfil 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_edit_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_edit_512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_320" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\logo_320.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_logout_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_logout_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_config_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_config_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_automacao_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_automacao_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_perfil_108" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_perfil_108.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_edit_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\icon_edit_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

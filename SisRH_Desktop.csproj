@@ -83,11 +83,17 @@
     <Compile Include="View\forms\f_EmitirHolerite.Designer.cs">
       <DependentUpon>f_EmitirHolerite.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_Perfil.cs">
+    <Compile Include="View\forms\f_Perfil1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_Perfil.Designer.cs">
-      <DependentUpon>f_Perfil.cs</DependentUpon>
+    <Compile Include="View\forms\f_Perfil1.Designer.cs">
+      <DependentUpon>f_Perfil1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\forms\f_Perfil2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\forms\f_Perfil2.Designer.cs">
+      <DependentUpon>f_Perfil2.cs</DependentUpon>
     </Compile>
     <Compile Include="View\forms\f_Relatorio.cs">
       <SubType>Form</SubType>
@@ -139,8 +145,11 @@
     <EmbeddedResource Include="View\forms\f_EmitirHolerite.resx">
       <DependentUpon>f_EmitirHolerite.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_Perfil.resx">
-      <DependentUpon>f_Perfil.cs</DependentUpon>
+    <EmbeddedResource Include="View\forms\f_Perfil1.resx">
+      <DependentUpon>f_Perfil1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\forms\f_Perfil2.resx">
+      <DependentUpon>f_Perfil2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\forms\f_Relatorio.resx">
       <DependentUpon>f_Relatorio.cs</DependentUpon>

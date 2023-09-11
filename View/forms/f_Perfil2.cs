@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SisRH_Desktop
+namespace SisRH_Desktop.View.forms
 {
-    public partial class f_Perfil : Form
+    public partial class f_Perfil2 : Form
     {
-        public f_Perfil()
+        public f_Perfil2()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void f_Perfil_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

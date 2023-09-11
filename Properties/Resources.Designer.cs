@@ -103,6 +103,26 @@ namespace SisRH_Desktop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_edit_24 {
+            get {
+                object obj = ResourceManager.GetObject("icon_edit_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_edit_512 {
+            get {
+                object obj = ResourceManager.GetObject("icon_edit_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_logout_16 {
             get {
                 object obj = ResourceManager.GetObject("icon_logout_16", resourceCulture);
