@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Conexao.cs" />
     <Compile Include="View\forms\Form_Esqueci_Senha.cs">
       <SubType>Form</SubType>
     </Compile>

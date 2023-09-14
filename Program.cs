@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisRH_Desktop.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace SisRH_Desktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new f_TelaInicial());
+
         }
 
         static public void Redirect(Form origem, Form destino)
