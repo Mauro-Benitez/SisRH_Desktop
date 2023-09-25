@@ -442,7 +442,7 @@
             this.Name = "f_CadColaborador1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sis-RH Folhas de Pagamento";
+            this.Text = "Sis.RH";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

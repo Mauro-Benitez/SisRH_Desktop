@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 576);
+            this.panel1.Size = new System.Drawing.Size(257, 575);
             this.panel1.TabIndex = 0;
             // 
             // button4
@@ -141,7 +141,7 @@
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button1.Size = new System.Drawing.Size(250, 80);
             this.button1.TabIndex = 2;
-            this.button1.Text = "   Gerenciar Colaboradores";
+            this.button1.Text = "       Gerenciar \r\n    Colaboradores";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
@@ -153,9 +153,9 @@
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 526);
+            this.panel3.Location = new System.Drawing.Point(0, 525);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 50);
+            this.panel3.Size = new System.Drawing.Size(257, 50);
             this.panel3.TabIndex = 1;
             // 
             // button6
@@ -173,6 +173,7 @@
             this.button6.Size = new System.Drawing.Size(30, 44);
             this.button6.TabIndex = 1;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -199,6 +200,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(96)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -206,7 +208,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 100);
+            this.panel2.Size = new System.Drawing.Size(257, 100);
             this.panel2.TabIndex = 0;
             // 
             // label2
@@ -250,16 +252,18 @@
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::SisRH_Desktop.Properties.Resources.logo_320;
-            this.pictureBox2.Location = new System.Drawing.Point(250, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(257, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(654, 576);
+            this.pictureBox2.Size = new System.Drawing.Size(676, 575);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // f_TelaInicial
             // 
-            this.ClientSize = new System.Drawing.Size(904, 576);
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.ClientSize = new System.Drawing.Size(933, 575);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -268,7 +272,7 @@
             this.Name = "f_TelaInicial";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sis-RH Folhas de Pagamento";
+            this.Text = "Sis.RH";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

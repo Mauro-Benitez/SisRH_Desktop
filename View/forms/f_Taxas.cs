@@ -16,5 +16,10 @@ namespace SisRH_Desktop
         {
             InitializeComponent();
         }
+
+        private void f_Taxas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

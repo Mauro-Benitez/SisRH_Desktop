@@ -31,6 +31,7 @@
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Guilherme Bezerra",
             "123456"}, -1);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f_EmitirHolerite));
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -395,8 +396,10 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "f_EmitirHolerite";
-            this.Text = "f_EmitirHolerite";
+            this.Text = "Sis.RH";
             this.Load += new System.EventHandler(this.f_EmitirHolerite_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

@@ -274,8 +274,9 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "f_Automacoes";
-            this.Text = "f_Automacoes";
+            this.Text = "Sis.RH";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

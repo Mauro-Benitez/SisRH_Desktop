@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tela_Login_Sis_RH;
 
 namespace SisRH_Desktop
 {
@@ -21,6 +22,18 @@ namespace SisRH_Desktop
         private void button1_Click(object sender, EventArgs e)
         {
             Program.Redirect(this, new f_ListarColab());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

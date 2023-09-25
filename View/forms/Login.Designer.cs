@@ -51,7 +51,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(56, 280);
+            this.pictureBox3.Location = new System.Drawing.Point(56, 270);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 33);
@@ -62,7 +62,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(92, 241);
+            this.panel1.Location = new System.Drawing.Point(92, 231);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 22);
@@ -79,7 +79,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Location = new System.Drawing.Point(92, 288);
+            this.panel2.Location = new System.Drawing.Point(92, 278);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 22);
@@ -87,10 +87,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(4, 3);
+            this.textBox2.Location = new System.Drawing.Point(4, 4);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
+            this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(168, 20);
             this.textBox2.TabIndex = 0;
             // 
@@ -105,10 +105,10 @@
             this.Card_login.Controls.Add(this.panel1);
             this.Card_login.Controls.Add(this.pictureBox3);
             this.Card_login.Controls.Add(this.pictureBox2);
-            this.Card_login.Location = new System.Drawing.Point(173, 15);
+            this.Card_login.Location = new System.Drawing.Point(117, 23);
             this.Card_login.Margin = new System.Windows.Forms.Padding(2);
             this.Card_login.Name = "Card_login";
-            this.Card_login.Size = new System.Drawing.Size(329, 436);
+            this.Card_login.Size = new System.Drawing.Size(350, 432);
             this.Card_login.TabIndex = 7;
             this.Card_login.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -153,7 +153,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(70, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(236, 212);
@@ -164,7 +164,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(56, 230);
+            this.pictureBox2.Location = new System.Drawing.Point(56, 220);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 41);
@@ -176,15 +176,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(662, 466);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(99)))));
+            this.ClientSize = new System.Drawing.Size(573, 476);
             this.Controls.Add(this.Card_login);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sis.RH - Sistema de Grenciamento de Recursos Humanos";
+            this.Text = "Sis.RH ";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -206,11 +207,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel Card_login;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

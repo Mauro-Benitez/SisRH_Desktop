@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tela_Login_Sis_RH;
 
 namespace SisRH_Desktop
 {
@@ -17,7 +18,7 @@ namespace SisRH_Desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new f_TelaInicial());
+            Application.Run(new Login());
 
         }
 
