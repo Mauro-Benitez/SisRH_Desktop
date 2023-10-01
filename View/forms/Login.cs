@@ -50,6 +50,11 @@ namespace Tela_Login_Sis_RH
         }
 
 
+
+
+
+
+
         private void CostomizeButtonAppearence(Button button)
         {
             int borderRadius = 8;
@@ -157,7 +162,7 @@ namespace Tela_Login_Sis_RH
 
             try
             {
-                if (textBox1.Text == "admin" && textBox2.Text == "admin")
+                if (textBox1.Text == "" && textBox2.Text == "")
                 {
                     f_TelaInicial telaInicial = new f_TelaInicial();                    
                     telaInicial.Show();
