@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisRH_Desktop;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,13 +15,19 @@ namespace Tela_Login_Sis_RH
 {
     public partial class Login : Form
     {
+        private Point dragStartPoint;
+        private bool isDragging = false;
+
+        private Form formAtivo;
+
         public Login()
         {
             InitializeComponent();
             CustomizeTextBoxAppearance();
             CostomizeButtonAppearence(button1);
+           
         }
-        private Form formAtivo;
+       
 
         private void FormShow(Form frm)
         {
@@ -41,6 +48,11 @@ namespace Tela_Login_Sis_RH
             }
            
         }
+
+
+
+
+
 
 
         private void CostomizeButtonAppearence(Button button)
@@ -68,10 +80,12 @@ namespace Tela_Login_Sis_RH
 
         }
 
+      
 
 
 
 
+        //ajuste da aparencia 
         private void CustomizeTextBoxAppearance()
         {
             Card_login.BorderStyle = BorderStyle.None;           
@@ -111,15 +125,50 @@ namespace Tela_Login_Sis_RH
         {
 
         }
-        
+        private void panel3_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                dragStartPoint = new Point(e.X, e.Y);
+            }
+        }
+
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point endPoint = PointToScreen(new Point(e.X, e.Y));
+                Location = new Point(endPoint.X - dragStartPoint.X, endPoint.Y - dragStartPoint.Y);
+            }
+        }
+        private void panel3_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+        }
+
+
+        //private void panel3_Paint_1(object sender, PaintEventArgs e)
+        //{
+        //    panel3.MouseDown += panel3_MouseDown_1;
+        //    panel3.MouseMove += panel3_MouseMove;
+        //    panel3.MouseUp += panel3_MouseUp;
+
+        //}
+
+        //verificação de login
         private void button1_Click(object sender, EventArgs e)
         {
 
             try
             {
-                if (textBox1.Text == "admin" && textBox2.Text == "admin")
+                if (textBox1.Text == "" && textBox2.Text == "")
                 {
-                    MessageBox.Show("Acesso realizado");
+                    f_TelaInicial telaInicial = new f_TelaInicial();                    
+                    telaInicial.Show();
+                    this.Hide();
+
+
                 }
                 else
                 {
@@ -138,6 +187,7 @@ namespace Tela_Login_Sis_RH
             }
         }
 
+        //link esqueci_senha
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormShow(new Form_Esqueci_Senha());
@@ -147,5 +197,18 @@ namespace Tela_Login_Sis_RH
         {
 
         }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
