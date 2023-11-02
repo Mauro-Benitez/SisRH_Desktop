@@ -21,7 +21,6 @@ namespace SisRH_Desktop
             Application.Run(new Login());
 
         }
-
         static public void Redirect(Form origem, Form destino)
         {
             origem.Hide();

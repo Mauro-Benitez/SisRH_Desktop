@@ -47,124 +47,129 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Conexao.cs" />
-    <Compile Include="View\forms\Form_Esqueci_Senha.cs">
+    <Compile Include="Config\Conexao.cs" />
+    <Compile Include="Forms\Form_Esqueci_Senha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\Form_Esqueci_Senha.Designer.cs">
+    <Compile Include="Forms\Form_Esqueci_Senha.Designer.cs">
       <DependentUpon>Form_Esqueci_Senha.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_Automacoes.cs">
+    <Compile Include="Forms\f_Automacoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_Automacoes.Designer.cs">
+    <Compile Include="Forms\f_Automacoes.Designer.cs">
       <DependentUpon>f_Automacoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_CadColaborador1.cs">
+    <Compile Include="Forms\f_CadColaborador1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_CadColaborador1.Designer.cs">
+    <Compile Include="Forms\f_CadColaborador1.Designer.cs">
       <DependentUpon>f_CadColaborador1.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_CadColaborador2.cs">
+    <Compile Include="Forms\f_CadColaborador2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_CadColaborador2.Designer.cs">
+    <Compile Include="Forms\f_CadColaborador2.Designer.cs">
       <DependentUpon>f_CadColaborador2.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_CriarAutomacoes.cs">
+    <Compile Include="Forms\f_CriarAutomacoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_CriarAutomacoes.Designer.cs">
+    <Compile Include="Forms\f_CriarAutomacoes.Designer.cs">
       <DependentUpon>f_CriarAutomacoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_EmitirHolerite.cs">
+    <Compile Include="Forms\f_EmitirHolerite.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_EmitirHolerite.Designer.cs">
+    <Compile Include="Forms\f_EmitirHolerite.Designer.cs">
       <DependentUpon>f_EmitirHolerite.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_Perfil1.cs">
+    <Compile Include="Forms\f_Perfil1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_Perfil1.Designer.cs">
+    <Compile Include="Forms\f_Perfil1.Designer.cs">
       <DependentUpon>f_Perfil1.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_Perfil2.cs">
+    <Compile Include="Forms\f_Perfil2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_Perfil2.Designer.cs">
+    <Compile Include="Forms\f_Perfil2.Designer.cs">
       <DependentUpon>f_Perfil2.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_Relatorio.cs">
+    <Compile Include="Forms\f_Relatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_Relatorio.Designer.cs">
+    <Compile Include="Forms\f_Relatorio.Designer.cs">
       <DependentUpon>f_Relatorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_Taxas.cs">
+    <Compile Include="Forms\f_Taxas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_Taxas.Designer.cs">
+    <Compile Include="Forms\f_Taxas.Designer.cs">
       <DependentUpon>f_Taxas.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_TelaInicial.cs">
+    <Compile Include="Forms\f_TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_TelaInicial.Designer.cs">
+    <Compile Include="Forms\f_TelaInicial.Designer.cs">
       <DependentUpon>f_TelaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\f_ListarColab.cs">
+    <Compile Include="Forms\f_ListarColab.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\f_ListarColab.Designer.cs">
+    <Compile Include="Forms\f_ListarColab.Designer.cs">
       <DependentUpon>f_ListarColab.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\forms\Login.cs">
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\forms\Login.Designer.cs">
+    <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AutomacaoModel.cs" />
+    <Compile Include="Models\CalculoModel.cs" />
+    <Compile Include="Models\FuncionarioModel.cs" />
+    <Compile Include="Models\HoleriteModel.cs" />
+    <Compile Include="Models\TaxaModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\forms\Form_Esqueci_Senha.resx">
+    <EmbeddedResource Include="Forms\Form_Esqueci_Senha.resx">
       <DependentUpon>Form_Esqueci_Senha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_Automacoes.resx">
+    <EmbeddedResource Include="Forms\f_Automacoes.resx">
       <DependentUpon>f_Automacoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_CadColaborador1.resx">
+    <EmbeddedResource Include="Forms\f_CadColaborador1.resx">
       <DependentUpon>f_CadColaborador1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_CadColaborador2.resx">
+    <EmbeddedResource Include="Forms\f_CadColaborador2.resx">
       <DependentUpon>f_CadColaborador2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_CriarAutomacoes.resx">
+    <EmbeddedResource Include="Forms\f_CriarAutomacoes.resx">
       <DependentUpon>f_CriarAutomacoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_EmitirHolerite.resx">
+    <EmbeddedResource Include="Forms\f_EmitirHolerite.resx">
       <DependentUpon>f_EmitirHolerite.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_Perfil1.resx">
+    <EmbeddedResource Include="Forms\f_Perfil1.resx">
       <DependentUpon>f_Perfil1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_Perfil2.resx">
+    <EmbeddedResource Include="Forms\f_Perfil2.resx">
       <DependentUpon>f_Perfil2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_Relatorio.resx">
+    <EmbeddedResource Include="Forms\f_Relatorio.resx">
       <DependentUpon>f_Relatorio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_Taxas.resx">
+    <EmbeddedResource Include="Forms\f_Taxas.resx">
       <DependentUpon>f_Taxas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_TelaInicial.resx">
+    <EmbeddedResource Include="Forms\f_TelaInicial.resx">
       <DependentUpon>f_TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\f_ListarColab.resx">
+    <EmbeddedResource Include="Forms\f_ListarColab.resx">
       <DependentUpon>f_ListarColab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\forms\Login.resx">
+    <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

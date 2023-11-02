@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,9 @@ namespace SisRH_Desktop.Model
 
         public Conexao(string connstring) {
             sqlConn = new SqlConnection(connstring);
+        }
+        public Conexao() {
+            sqlConn = new SqlConnection("Data Source=DESKTOP-SJ6LJ9P;Initial Catalog=sisrh;Integrated Security=true");
         }
         private bool TryConn()
         {
