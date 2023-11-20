@@ -1,4 +1,8 @@
-﻿using System;
+﻿using SisRH_Desktop.Controller;
+using SisRH_Desktop.Enum;
+using SisRH_Desktop.Forms;
+using SisRH_Desktop.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SisRH_Desktop
 {
@@ -14,11 +19,14 @@ namespace SisRH_Desktop
     {
 
         private Form FormAtivo;
-
+        int registroColaborador = 1;
 
         public f_ListarColab()
         {
             InitializeComponent();
+            formatacaoListView();
+            CarregarTodosFuncionarios();
+            
         }
 
         private void FormShow(Form frm)
@@ -32,7 +40,6 @@ namespace SisRH_Desktop
         }
 
 
-
         private void FecharFormAtivo()
         {
             if (FormAtivo != null)
@@ -41,10 +48,103 @@ namespace SisRH_Desktop
             }
         }
 
+        private void formatacaoListView()
+        {
 
+            lvFuncionario.Columns.Add(" # ", 50);
+            lvFuncionario.Columns.Add("Nome", 110);
+            lvFuncionario.Columns.Add("Email", 100);
+            lvFuncionario.Columns.Add("Cargo", 100);
+            lvFuncionario.Columns.Add("Nivel", 80);
+            lvFuncionario.Columns.Add("Ativo", 50);
+
+            //lvFuncionario.View = System.Windows.Forms.View.Details;
+            //lvFuncionario.GridLines = true;
+
+        }
+
+        private void CarregarTodosFuncionarios()
+        {
+            FuncionarioModel funcEntrada = new FuncionarioModel();
+
+            try
+            {
+
+                ControllerFuncionario contFuncionario = new ControllerFuncionario();
+                var listaFuncionario = contFuncionario.ListarTodos(funcEntrada);
+                lvFuncionario.Items.Clear();
+                foreach (FuncionarioModel resultado in listaFuncionario)
+                {
+
+                    lvFuncionario.Items.Add(new ListViewItem(new string[]
+                    {   resultado.registro.ToString(),
+                        resultado.nome,
+                        resultado.email,
+                        resultado.cargo,
+                        resultado.nivel_acesso.ToString(),
+                        resultado.ativo.ToString()
+
+                    }));
+                   
+                };
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+
+            }
+
+        }
+
+
+        public void FuncionarioCheck()
+        {
+
+            FuncionarioModel funsaida;
+            int registro;
+            
+
+            foreach (ListViewItem item in lvFuncionario.Items)
+            {
+                string[] partes = item.Text.Split(',');
+                if (item.Checked)
+                {
+                    if(partes.Length > 0 )
+                    {
+
+                        if (int.TryParse(partes[0].Trim(), out registro))
+                        {
+                            FormShow(new f_AtualizarColaborador(registro));
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Não foi possível converter o número de registro");
+
+                        }
+
+                    }
+                    
+                   
+                }
+                
+            }
+           
+                MessageBox.Show("Selecione um funcionário para atulizar", "Aviso", MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+
+            
+
+
+
+
+        }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
 
         }
 
@@ -68,6 +168,91 @@ namespace SisRH_Desktop
         private void btnEmitir_Click(object sender, EventArgs e)
         {
             FormShow(new f_EmitirHolerite());
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+
+        private void lvFuncionario_SelectedIndexChanged(object sender, EventArgs e)
+        {                             
+    
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+           
+            if (txtNome.Text != string.Empty)
+            {
+                FuncionarioModel funcEntrada = new FuncionarioModel(txtNome.Text);
+
+                try
+                {
+
+                    ControllerFuncionario contFuncionario = new ControllerFuncionario();
+                    var listaFuncionario = contFuncionario.ListarPorNome(funcEntrada);
+                    lvFuncionario.Items.Clear();
+                    foreach (FuncionarioModel resultado in listaFuncionario)
+                    {
+
+                        lvFuncionario.Items.Add(new ListViewItem(new string[]
+                        {   resultado.registro.ToString(),
+                        resultado.nome,
+                        resultado.email,
+                        resultado.cargo,
+                        resultado.nivel_acesso.ToString(),
+                        resultado.ativo.ToString()
+
+                        }));
+                       
+                    };
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Nenhum dado inserido");
+            }
+            
+                
+           
+
+           
+        }
+
+        private void btnAtualizarDados_Click(object sender, EventArgs e)
+        {
+
+            FuncionarioCheck();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            CarregarTodosFuncionarios();
+        }
+
+        private void lvFuncionario_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            if (e.Item.Checked)
+            {
+                foreach (ListViewItem item in lvFuncionario.Items)
+                {
+                    if (item != e.Item)
+                    {
+                        item.Checked = false;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using SisRH_Desktop.View.forms;
+﻿using SisRH_Desktop.Controller;
+using SisRH_Desktop.Model;
+using SisRH_Desktop.View.forms;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -17,13 +19,35 @@ namespace SisRH_Desktop
     public partial class f_TelaInicial : Form
     {
         private Form FormAtivo;
+        string login;
+        string senha;
 
 
         public f_TelaInicial()
         {
             InitializeComponent();
         }
-       
+        public f_TelaInicial(string login, string senha)
+        {
+            this.login = login;
+            this.senha = senha; 
+            InitializeComponent();
+            FuncionarioLogado();
+        }
+        private void FuncionarioLogado()
+        {
+            FuncionarioModel funEntrada = new FuncionarioModel(login, senha);
+            ControllerFuncionario controllerFuncionario = new ControllerFuncionario();
+            FuncionarioModel funSaida = controllerFuncionario.CarregarDadosLogado(funEntrada);
+
+            lblNome.Text = funSaida.nome;
+            lblCargo.Text = funSaida.cargo;
+
+
+
+
+        }
+
         private void FormShow(Form frm)
         {
             FecharFormAtivo();

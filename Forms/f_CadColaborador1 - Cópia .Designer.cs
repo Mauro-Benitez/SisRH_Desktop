@@ -33,8 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
             this.checkBoxAcesso = new System.Windows.Forms.CheckBox();
             this.txtVT = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -60,6 +58,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -132,25 +132,6 @@
             this.panel1.Size = new System.Drawing.Size(446, 480);
             this.panel1.TabIndex = 59;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(73, 365);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(116, 25);
-            this.label14.TabIndex = 84;
-            this.label14.Text = "Senha SisRH";
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(161, 362);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(256, 32);
-            this.txtSenha.TabIndex = 83;
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
-            // 
             // checkBoxAcesso
             // 
             this.checkBoxAcesso.AutoSize = true;
@@ -169,7 +150,7 @@
             this.txtVT.Name = "txtVT";
             this.txtVT.Size = new System.Drawing.Size(256, 32);
             this.txtVT.TabIndex = 82;
-            this.txtVT.TextChanged += new System.EventHandler(this.txtVT_TextChanged);
+            this.txtVT.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label13
             // 
@@ -188,7 +169,6 @@
             this.txtVR.Name = "txtVR";
             this.txtVR.Size = new System.Drawing.Size(256, 32);
             this.txtVR.TabIndex = 80;
-            this.txtVR.TextChanged += new System.EventHandler(this.txtVR_TextChanged);
             // 
             // label12
             // 
@@ -207,7 +187,6 @@
             this.txtSalarioBruto.Name = "txtSalarioBruto";
             this.txtSalarioBruto.Size = new System.Drawing.Size(256, 32);
             this.txtSalarioBruto.TabIndex = 78;
-            this.txtSalarioBruto.TextChanged += new System.EventHandler(this.txtSalarioBruto_TextChanged);
             // 
             // label11
             // 
@@ -226,7 +205,6 @@
             this.txtHoras.Name = "txtHoras";
             this.txtHoras.Size = new System.Drawing.Size(256, 32);
             this.txtHoras.TabIndex = 76;
-            this.txtHoras.TextChanged += new System.EventHandler(this.txtHoras_TextChanged);
             // 
             // label2
             // 
@@ -247,7 +225,6 @@
             this.dtContratacao.Size = new System.Drawing.Size(256, 32);
             this.dtContratacao.TabIndex = 74;
             this.dtContratacao.Value = new System.DateTime(2023, 9, 6, 0, 0, 0, 0);
-            this.dtContratacao.ValueChanged += new System.EventHandler(this.dtContratacao_ValueChanged);
             // 
             // label1
             // 
@@ -279,7 +256,6 @@
             this.dtNascimento.Name = "dtNascimento";
             this.dtNascimento.Size = new System.Drawing.Size(256, 32);
             this.dtNascimento.TabIndex = 69;
-            this.dtNascimento.ValueChanged += new System.EventHandler(this.dtNascimento_ValueChanged);
             // 
             // txtEmail
             // 
@@ -288,7 +264,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(256, 32);
             this.txtEmail.TabIndex = 68;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtEndereco
             // 
@@ -297,7 +272,6 @@
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(256, 32);
             this.txtEndereco.TabIndex = 67;
-            this.txtEndereco.TextChanged += new System.EventHandler(this.txtEndereco_TextChanged);
             // 
             // txtTelefone
             // 
@@ -306,7 +280,6 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(256, 32);
             this.txtTelefone.TabIndex = 66;
-            this.txtTelefone.TextChanged += new System.EventHandler(this.txtTelefone_TextChanged);
             // 
             // txtCargo
             // 
@@ -315,7 +288,6 @@
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(256, 32);
             this.txtCargo.TabIndex = 65;
-            this.txtCargo.TextChanged += new System.EventHandler(this.txtCargo_TextChanged);
             // 
             // txtNome
             // 
@@ -324,7 +296,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(256, 32);
             this.txtNome.TabIndex = 64;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // pictureBox2
             // 
@@ -402,6 +373,24 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(161, 362);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(256, 32);
+            this.txtSenha.TabIndex = 83;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(73, 365);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(116, 25);
+            this.label14.TabIndex = 84;
+            this.label14.Text = "Senha SisRH";
             // 
             // f_CadColaborador1
             // 

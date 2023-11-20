@@ -20,37 +20,10 @@ namespace SisRH_Desktop
         public f_CadColaborador1()
         {
             InitializeComponent();
-            btnCadastrar.Enabled = false;
-            
         }
-
-        private void VerificaCamposPreenchiodos()
-        {
-            bool todosPreenchidos = !string.IsNullOrEmpty(txtNome.Text) &&
-                !string.IsNullOrEmpty(txtCargo.Text) &&
-            !string.IsNullOrEmpty(txtEndereco.Text) &&
-            !string.IsNullOrEmpty(txtEmail.Text) &&
-            ! string.IsNullOrEmpty(txtSenha.Text) &&
-                 ! string.IsNullOrEmpty(txtTelefone.Text) &&
-            
-             ! string.IsNullOrEmpty(txtHoras.Text) &&
-             ! string.IsNullOrEmpty(txtSalarioBruto.Text) &&             
-             ! string.IsNullOrEmpty(txtVR.Text) &&
-             ! string.IsNullOrEmpty(txtVT.Text);
-                            
-            btnCadastrar.Enabled = todosPreenchidos;
-
-        }
-
-
-
-        
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-
-           //VerificaCamposPreenchiodos();
-
 
             EnumAcessos Acesso = EnumAcessos.Colaborador; 
             EnumAtivo Ativo = EnumAtivo.Sim;
@@ -66,7 +39,7 @@ namespace SisRH_Desktop
             
 
            FuncionarioModel funcionarioEnt = new FuncionarioModel(txtNome.Text,txtEndereco.Text,txtEmail.Text,
-                                                                   txtTelefone.Text,dtNascimento.Value, dtContratacao.Value,
+                                                                   txtTelefone.Text,dtNascimento.MaxDate, dtContratacao.MaxDate,
                                                                    horasMensais,VT,VR,salarioBruto,Acesso, txtSenha.Text, 
                                                                    Ativo, txtCargo.Text);
 
@@ -94,7 +67,7 @@ namespace SisRH_Desktop
         }
 
 
-        private bool limparcampos()
+        private void limparcampos()
         {
             txtNome.Text = string.Empty;
             txtCargo.Text = string.Empty;
@@ -105,10 +78,11 @@ namespace SisRH_Desktop
             dtNascimento.Text = string.Empty;
             dtContratacao.Text = string.Empty;
             txtHoras.Text = string.Empty;
-            txtSalarioBruto.Text = string.Empty;            
+            txtSalarioBruto.Text = string.Empty;
+            txtSalarioBruto.Text = string.Empty;
             txtVR.Text = string.Empty;
             txtVT.Text = string.Empty;
-            return true;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -219,67 +193,11 @@ namespace SisRH_Desktop
 
         }
 
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void txtCargo_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void txtEndereco_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void txtTelefone_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void dtNascimento_ValueChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void dtContratacao_ValueChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void txtHoras_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void txtSalarioBruto_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void txtVR_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
-
-        private void txtVT_TextChanged(object sender, EventArgs e)
-        {
-            VerificaCamposPreenchiodos();
-        }
     }
-
 }

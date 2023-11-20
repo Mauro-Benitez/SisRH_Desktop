@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SisRH_Desktop.Model
 {
-    internal class TaxaModel
+    public class TaxaModel
     {
         int id { get; set; }
         string nome { get; set; }

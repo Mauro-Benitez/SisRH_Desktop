@@ -1,0 +1,59 @@
+﻿//banco de dados
+CREATE DATABASE BD_Funcionario;
+
+
+//tabela
+CREATE TABLE TB_funcionario (
+    registro int IDENTITY(1,1) PRIMARY KEY,
+	nome varchar(255),	
+	endereco varchar (255),
+	email varchar (255),
+	telefone varchar (255) ,
+	data_nascimento Date,
+	data_contratacao Date,
+	horas_mensais int,
+	valor_vt DECIMAL(10, 2),
+	valor_vr DECIMAL(10, 2),
+	salario_bruto DECIMAL(10, 2),
+	nivel_acesso int,
+	senha varchar(255),
+	ativo int,
+	cargo varchar(255)
+	);
+	
+	//insert perfil admin e funcionarios ficticios 
+
+	INSERT INTO TB_funcionario (nome, endereco, email, telefone, data_nascimento, data_contratacao, horas_mensais, valor_vt, valor_vr, nivel_acesso, senha, ativo, salario_bruto, cargo) VALUES 
+('Admin', 'Av Paulista', 'Admin', '11321654987', '2002-12-28', '2023-11-19', 250.00, 270.0, 6000.00, 1, 'admin', 1, 4000.0, 'Administrador'),
+('Carlos Santos', 'Av. Central, 789', 'carlos@example.com', '111223344', '1985-07-20', '2023-11-05', 170, 270.0, 210.0, 2, 'senhaCarlos123', 1, 4000.0, 'Gerente de Projetos'),
+('Ana Lima', 'R. Principal, 567', 'ana@example.com', '998877665', '1998-03-10', '2023-11-03', 150, 260.0, 190.0, 2, 'senhaAna789', 1, 3200.0, 'Analista de Marketing'),
+('Pedro Alves', 'Rua XYZ, 789', 'pedro@example.com', '5544332211', '1995-12-15', '2023-11-01', 190, 290.0, 230.0, 2, 'senhaPedro456', 1, 4200.0, 'Desenvolvedor Web'),
+('Fernanda Oliveira', 'Rua dos Sonhos, 123', 'fernanda@example.com', '987654321', '1990-09-28', '2023-10-25', 160, 250.0, 200.0, 2, 'senhaFernanda123', 1, 3800.0, 'Analista Financeiro'),
+('Gabriel Mendes', 'Av. das Flores, 456', 'gabriel@example.com', '123456789', '1993-04-15', '2023-10-20', 180, 280.0, 220.0, 2, 'senhaGabriel456', 1, 4200.0, 'Engenheiro de Software'),
+('Luciana Costa', 'R. das Palmeiras, 789', 'luciana@example.com', '987612345', '1988-12-10', '2023-10-18', 190, 290.0, 230.0, 2, 'senhaLuciana789', 1, 4500.0, 'Arquiteta de Software'),
+('Mateus Silva', 'Av. Central, 123', 'mateus@example.com', '1122334455', '1992-08-12', '2023-10-15', 160, 250.0, 200.0, 2, 'senhaMateus123', 1, 3800.0, 'Designer Gráfico'),
+('Carolina Santos', 'Rua da Praia, 456', 'carolina@example.com', '9988776655', '1995-03-25', '2023-10-12', 180, 280.0, 220.0, 2, 'senhaCarolina456', 1, 4200.0, 'Analista de RH'),
+('Rafaela Oliveira', 'R. dos Pinheiros, 789', 'rafaela@example.com', '6655443322', '1989-12-30', '2023-10-10', 190, 290.0, 230.0, 2, 'senhaRafaela789', 1, 4500.0, 'Gerente de Vendas'),
+('Henrique Almeida', 'Av. das Árvores, 123', 'henrique@example.com', '1122446688', '1991-05-16', '2023-10-08', 160, 250.0, 200.0, 2, 'senhaHenrique123', 1, 3800.0, 'Engenheiro Eletrônico'),
+('Juliana Martins', 'R. das Flores, 456', 'juliana@example.com', '9988665522', '1994-02-28', '2023-10-05', 180, 280.0, 220.0, 2, 'senhaJuliana456', 1, 4200.0, 'Analista de Marketing'),
+('Matheus Costa', 'Av. da Liberdade, 789', 'matheus@example.com', '6655224466', '1990-11-20', '2023-10-02', 190, 290.0, 230.0, 2, 'senhaMatheus789', 1, 4500.0, 'Desenvolvedor Full Stack'),
+('Gabriela Lima', 'R. das Palmeiras, 123', 'gabriela@example.com', '1122334477', '1993-06-10', '2023-09-30', 160, 250.0, 200.0, 2, 'senhaGabriela123', 1, 3800.0, 'Analista de Negócios'),
+('Lucas Rodrigues', 'Av. dos Girassóis, 456', 'lucas@example.com', '9988776655', '1988-04-18', '2023-09-28', 180, 280.0, 220.0, 2, 'senhaLucas456', 1, 4200.0, 'Arquiteto de Software'),
+('Amanda Pereira', 'R. dos Ipês, 789', 'amanda@example.com', '6655443322', '1995-10-25', '2023-09-25', 190, 290.0, 230.0, 2, 'senhaAmanda789', 1, 4500.0, 'Designer UI/UX'),
+('Pedro Gomes', 'Av. das Acácias, 123', 'pedro@example.com', '1122446699', '1991-09-08', '2023-09-23', 160, 250.0, 200.0, 2, 'senhaPedro123', 1, 3800.0, 'Analista de Sistemas'),
+('Mariana Oliveira', 'R. das Oliveiras, 456', 'mariana@example.com', '9988665544', '1994-12-30', '2023-09-20', 180, 280.0, 220.0, 2, 'senhaMariana456', 1, 4200.0, 'Engenheira Civil'),
+('Bruno Almeida', 'Av. da Esperança, 789', 'bruno@example.com', '6655224477', '1990-08-20', '2023-09-18', 190, 290.0, 230.0, 2, 'senhaBruno789', 1, 4500.0, 'Analista de Redes'),
+('Fernando Silva', 'R. das Amoras, 123', 'fernando@example.com', '1122334400', '1993-03-15', '2023-09-15', 160, 250.0, 200.0, 2, 'senhaFernando123', 1, 3800.0, 'Cientista de Dados'),
+('Vanessa Nunes', 'Av. das Magnólias, 456', 'vanessa@example.com', '9988776600', '1995-01-28', '2023-09-12', 180, 280.0, 220.0, 2, 'senhaVanessa456', 1, 4200.0, 'Analista de Qualidade'),
+('Rafaela Castro', 'R. dos Coqueiros, 789', 'rafaela@example.com', '6655443300', '1990-11-10', '2023-09-10', 190, 290.0, 230.0, 2, 'senhaRafaela789', 1, 4500.0, 'Desenvolvedora Front-End'),
+('Paulo Santos', 'Av. dos Lírios, 123', 'paulo@example.com', '1122446600', '1991-06-28', '2023-09-08', 160, 250.0, 200.0, 2, 'senhaPaulo123', 1, 3800.0, 'Analista de Banco de Dados'),
+('Renata Lima', 'R. das Rosas, 456', 'renata@example.com', '9988665500', '1994-04-15', '2023-09-05', 180, 280.0, 220.0, 2, 'senhaRenata456', 1, 4200.0, 'Analista de Suporte'),
+('Gustavo Pereira', 'Av. das Orquídeas, 789', 'gustavo@example.com', '6655224400', '1990-12-10', '2023-09-03', 190, 290.0, 230.0, 2, 'senhaGustavo789', 1, 4500.0, 'Engenheiro Elétrico'),
+('Camila Oliveira', 'R. dos Jasmins, 123', 'camila@example.com', '1122334100', '1993-07-25', '2023-09-01', 160, 250.0, 200.0, 2, 'senhaCamila123', 1, 3800.0, 'Analista de Testes'),
+('Leonardo Rodrigues', 'Av. das Begônias, 456', 'leonardo@example.com', '9988776400', '1995-05-10', '2023-08-29', 180, 280.0, 220.0, 2, 'senhaLeonardo456', 1, 4200.0, 'Analista de Segurança da Informação');
+
+
+
+	*Após o insert acessar o sistema com o seguinte login
+	//login= Admin
+	//Senha = admin

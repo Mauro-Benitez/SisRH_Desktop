@@ -48,11 +48,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\Conexao.cs" />
+    <Compile Include="Controller\ControllerFuncionario.cs" />
+    <Compile Include="Enum\EnumAcessos.cs" />
+    <Compile Include="Enum\EnumAtivo.cs" />
     <Compile Include="Forms\Form_Esqueci_Senha.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form_Esqueci_Senha.Designer.cs">
       <DependentUpon>Form_Esqueci_Senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\f_AtualizarColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\f_AtualizarColaborador.Designer.cs">
+      <DependentUpon>f_AtualizarColaborador.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\f_Automacoes.cs">
       <SubType>Form</SubType>
@@ -126,15 +135,19 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\AutomacaoModel.cs" />
-    <Compile Include="Models\CalculoModel.cs" />
-    <Compile Include="Models\FuncionarioModel.cs" />
-    <Compile Include="Models\HoleriteModel.cs" />
-    <Compile Include="Models\TaxaModel.cs" />
+    <Compile Include="Models\bean\AutomacaoModel.cs" />
+    <Compile Include="Models\bean\CalculoModel.cs" />
+    <Compile Include="Models\bean\FuncionarioModel.cs" />
+    <Compile Include="Models\bean\HoleriteModel.cs" />
+    <Compile Include="Models\bean\TaxaModel.cs" />
+    <Compile Include="Models\dao\DaoFuncionario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Form_Esqueci_Senha.resx">
       <DependentUpon>Form_Esqueci_Senha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\f_AtualizarColaborador.resx">
+      <DependentUpon>f_AtualizarColaborador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\f_Automacoes.resx">
       <DependentUpon>f_Automacoes.cs</DependentUpon>
@@ -197,6 +210,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Script\ScriptBD.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

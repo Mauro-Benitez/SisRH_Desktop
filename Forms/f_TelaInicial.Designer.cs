@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f_TelaInicial));
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.btnTaxas = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnAutomacao = new System.Windows.Forms.Button();
@@ -39,16 +43,12 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panel_form = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelPrincipal.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel_form.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPrincipal
@@ -66,6 +66,59 @@
             this.panelPrincipal.Size = new System.Drawing.Size(257, 575);
             this.panelPrincipal.TabIndex = 0;
             this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(96)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.lblCargo);
+            this.panel2.Controls.Add(this.lblNome);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(257, 100);
+            this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
+            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::SisRH_Desktop.Properties.Resources.icon_perfil_108;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(84, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_4);
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCargo.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.White;
+            this.lblCargo.Location = new System.Drawing.Point(90, 60);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(146, 25);
+            this.lblCargo.TabIndex = 2;
+            this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCargo.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // lblNome
+            // 
+            this.lblNome.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(90, 35);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNome.Size = new System.Drawing.Size(132, 25);
+            this.lblNome.TabIndex = 1;
+            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNome.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnTaxas
             // 
@@ -224,61 +277,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::SisRH_Desktop.Properties.Resources.icon_perfil_108;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_4);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(96)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(257, 100);
-            this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
-            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(90, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Gerente RH";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(90, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(132, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Matheus Borges";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // f_TelaInicial
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -295,11 +293,11 @@
             this.Text = "Sis.RH";
             this.Load += new System.EventHandler(this.f_TelaInicial_Load);
             this.panelPrincipal.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel_form.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -318,8 +316,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Label lblNome;
     }
 }
 

@@ -1,4 +1,7 @@
 ﻿using SisRH_Desktop;
+using SisRH_Desktop.Controller;
+using SisRH_Desktop.Model;
+using SisRH_Desktop.Models.dao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +27,7 @@ namespace Tela_Login_Sis_RH
         {
             InitializeComponent();
             CustomizeTextBoxAppearance();
-            CostomizeButtonAppearence(button1);
+            CostomizeButtonAppearence(btnAcessar);
            
         }
        
@@ -67,7 +70,7 @@ namespace Tela_Login_Sis_RH
             button.FlatAppearance.BorderSize = 0;
 
 
-            Rectangle bounds = new Rectangle(0, 0, button1.Width, button1.Height);
+            Rectangle bounds = new Rectangle(0, 0, btnAcessar.Width, btnAcessar.Height);
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
 
             path.AddArc(bounds.X, bounds.Y, borderRadius, borderRadius, 180, 90);
@@ -99,8 +102,8 @@ namespace Tela_Login_Sis_RH
             panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 15, 15));
 
             // Ajustar aparência da TextBox
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.BackColor = Color.White;
+            txtEmail.BorderStyle = BorderStyle.None;
+            txtEmail.BackColor = Color.White;
 
 
             panel2.BorderStyle = BorderStyle.None;
@@ -109,8 +112,8 @@ namespace Tela_Login_Sis_RH
             panel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 15, 15));
 
             // Ajustar aparência da TextBox
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.BackColor = Color.White;
+            txtSenha.BorderStyle = BorderStyle.None;
+            txtSenha.BackColor = Color.White;
 
             
 
@@ -157,35 +160,7 @@ namespace Tela_Login_Sis_RH
         //}
 
         //verificação de login
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                if (textBox1.Text == "" && textBox2.Text == "")
-                {
-                    f_TelaInicial telaInicial = new f_TelaInicial();                    
-                    telaInicial.Show();
-                    this.Hide();
-
-
-                }
-                else
-                {
-                    MessageBox.Show("Login ou senha incorretas",
-                                    "Erro",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Login ou senha incorretas",
-                                    "Erro",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-            }
-        }
+  
 
         //link esqueci_senha
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -209,6 +184,56 @@ namespace Tela_Login_Sis_RH
 
         }
 
-        
+        private void btnAcessar_Click(object sender, EventArgs e)
+        {
+            string email = txtEmail.Text;
+            string senha = txtSenha.Text;
+
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(senha))
+            {
+
+                MessageBox.Show("Por favor, preencha todos os campos de login",
+                                        "Aviso",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+
+
+            }
+
+
+            else
+            {
+                FuncionarioModel funEntrada = new FuncionarioModel(email, senha);
+                ControllerFuncionario conFuncionario = new ControllerFuncionario();
+
+                bool Acessar = conFuncionario.login(funEntrada);
+
+                if (Acessar)
+                {
+                    f_TelaInicial telaInicial = new f_TelaInicial(email, senha);
+                    telaInicial.Show();
+                    this.Hide();
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Login ou senha incorretas",
+                                        "Erro",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                }
+
+            }
+
+
+
+
+
+            
+
+
+        }
     }
 }
