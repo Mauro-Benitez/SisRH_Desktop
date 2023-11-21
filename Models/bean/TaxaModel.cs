@@ -8,8 +8,10 @@ namespace SisRH_Desktop.Model
 {
     public class TaxaModel
     {
-        int id { get; set; }
-        string nome { get; set; }
+        public int id { get; set; }
+        public string nome { get; set; }
+        public HoleriteModel holerite { get; set; }
+        public FuncionarioModel funcionario { get; set; }
         double valor_base { get; set; }
         int desconto_acresimo { get; set; }
         int ativo { get; set; }

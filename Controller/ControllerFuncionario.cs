@@ -106,9 +106,16 @@ namespace SisRH_Desktop.Controller
         public FuncionarioModel CarregarDadosLogado(FuncionarioModel funcEntrada)
         {
             DaoFuncionario = new DaoFuncionario();
-            FuncionarioModel funSaida = DaoFuncionario.CarregarDadosLogados(funcEntrada);
+            FuncionarioModel funSaida = DaoFuncionario.Login(funcEntrada);
             return funSaida;
 
         }
+
+        //public FuncionarioModel PerfilLogado(FuncionarioModel funEntrada)
+        //{
+        //    DaoFuncionario = new DaoFuncionario();
+        //    FuncionarioModel funSaida = DaoFuncionario.CarregarDadosLogados(funEntrada);
+        //    return funSaida;
+        //}
     }
 }

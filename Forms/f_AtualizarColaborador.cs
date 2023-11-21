@@ -52,6 +52,7 @@ namespace SisRH_Desktop.Forms
             txtVT.Text = funcionario.valor_vt.ToString();
             txtAtivo.Text = funcionario.ativo.ToString();
             txtNivel.Text = funcionario.nivel_acesso.ToString();
+            txtRegistro.Text = funcionario.registro.ToString();
 
 
             int nivelAcesso = (int)funcionario.nivel_acesso;
@@ -122,7 +123,7 @@ namespace SisRH_Desktop.Forms
             txtSalarioBruto.Text = string.Empty;
             txtVR.Text = string.Empty;
             txtVT.Text = string.Empty;
-
+            txtRegistro.Text = string.Empty;
         }
 
         private void btnDesativar_Click(object sender, EventArgs e)
@@ -153,6 +154,11 @@ namespace SisRH_Desktop.Forms
 
            
 
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

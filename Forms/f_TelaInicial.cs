@@ -200,7 +200,7 @@ namespace SisRH_Desktop
 
         private void pictureBox1_Click_4(object sender, EventArgs e)
         {
-            FormShow(new f_Perfil2());
+            FormShow(new f_Perfil2(login,senha));
             foreach (Control ctrl in panelPrincipal.Controls)
             {
                 ctrl.BackColor = BackColor = Color.FromArgb(56, 58, 99);

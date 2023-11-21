@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtNivel = new System.Windows.Forms.TextBox();
+            this.txtAtivo = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.checkBoxAcesso = new System.Windows.Forms.CheckBox();
@@ -49,6 +53,7 @@
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,12 +63,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDesativar = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtAtivo = new System.Windows.Forms.TextBox();
-            this.txtNivel = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.txtRegistro = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +73,8 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.txtRegistro);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.txtNivel);
             this.panel1.Controls.Add(this.txtAtivo);
@@ -107,6 +111,43 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 529);
             this.panel1.TabIndex = 60;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(124, 775);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 25);
+            this.label16.TabIndex = 89;
+            this.label16.Text = "Nivel:";
+            // 
+            // txtNivel
+            // 
+            this.txtNivel.Enabled = false;
+            this.txtNivel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNivel.Location = new System.Drawing.Point(185, 772);
+            this.txtNivel.Name = "txtNivel";
+            this.txtNivel.Size = new System.Drawing.Size(256, 32);
+            this.txtNivel.TabIndex = 88;
+            // 
+            // txtAtivo
+            // 
+            this.txtAtivo.Enabled = false;
+            this.txtAtivo.Location = new System.Drawing.Point(377, 834);
+            this.txtAtivo.Name = "txtAtivo";
+            this.txtAtivo.Size = new System.Drawing.Size(67, 22);
+            this.txtAtivo.TabIndex = 87;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.label15.Location = new System.Drawing.Point(304, 832);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(91, 29);
+            this.label15.TabIndex = 86;
+            this.label15.Text = "Ativo =";
             // 
             // label14
             // 
@@ -290,6 +331,17 @@
             this.txtNome.Size = new System.Drawing.Size(256, 32);
             this.txtNome.TabIndex = 64;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(99)))));
+            this.pictureBox2.Image = global::SisRH_Desktop.Properties.Resources.icon_perfil_108;
+            this.pictureBox2.Location = new System.Drawing.Point(64, 118);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(96, 98);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 63;
+            this.pictureBox2.TabStop = false;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -386,17 +438,6 @@
             this.btnAtualizar.UseVisualStyleBackColor = false;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(99)))));
-            this.pictureBox2.Image = global::SisRH_Desktop.Properties.Resources.icon_perfil_108;
-            this.pictureBox2.Location = new System.Drawing.Point(64, 118);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(96, 98);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 63;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnDesativar
             // 
             this.btnDesativar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(99)))));
@@ -414,41 +455,24 @@
             this.btnDesativar.UseVisualStyleBackColor = false;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
             // 
-            // label15
+            // txtRegistro
             // 
-            this.label15.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
-            this.label15.Location = new System.Drawing.Point(304, 832);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(91, 29);
-            this.label15.TabIndex = 86;
-            this.label15.Text = "Ativo =";
+            this.txtRegistro.Enabled = false;
+            this.txtRegistro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegistro.Location = new System.Drawing.Point(185, 734);
+            this.txtRegistro.Name = "txtRegistro";
+            this.txtRegistro.Size = new System.Drawing.Size(256, 32);
+            this.txtRegistro.TabIndex = 90;
             // 
-            // txtAtivo
+            // label17
             // 
-            this.txtAtivo.Enabled = false;
-            this.txtAtivo.Location = new System.Drawing.Point(377, 834);
-            this.txtAtivo.Name = "txtAtivo";
-            this.txtAtivo.Size = new System.Drawing.Size(67, 22);
-            this.txtAtivo.TabIndex = 87;
-            // 
-            // txtNivel
-            // 
-            this.txtNivel.Enabled = false;
-            this.txtNivel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNivel.Location = new System.Drawing.Point(185, 772);
-            this.txtNivel.Name = "txtNivel";
-            this.txtNivel.Size = new System.Drawing.Size(256, 32);
-            this.txtNivel.TabIndex = 88;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(124, 775);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 25);
-            this.label16.TabIndex = 89;
-            this.label16.Text = "Nivel:";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(103, 736);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(84, 25);
+            this.label17.TabIndex = 91;
+            this.label17.Text = "Registro:";
             // 
             // f_AtualizarColaborador
             // 
@@ -512,5 +536,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtNivel;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtRegistro;
     }
 }

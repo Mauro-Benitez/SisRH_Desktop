@@ -99,13 +99,13 @@ namespace SisRH_Desktop
         }
 
 
-        public void FuncionarioCheck()
+        public void FuncionarioCheckEditar()
         {
 
             FuncionarioModel funsaida;
             int registro;
-            
 
+            
             foreach (ListViewItem item in lvFuncionario.Items)
             {
                 string[] partes = item.Text.Split(',');
@@ -129,18 +129,75 @@ namespace SisRH_Desktop
                     
                    
                 }
+
                 
+                
+                    //MessageBox.Show("Selecione um funcionário para atulizar", "Aviso", MessageBoxButtons.OK,
+                    //               MessageBoxIcon.Warning);
+
+                
+
             }
            
-                MessageBox.Show("Selecione um funcionário para atulizar", "Aviso", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
-
+               
             
 
 
 
 
         }
+
+        public void FuncionarioCheckEmitirHolerite()
+        {
+
+            FuncionarioModel funsaida;
+            int registro;
+
+
+            foreach (ListViewItem item in lvFuncionario.Items)
+            {
+                string[] partes = item.Text.Split(',');
+                if (item.Checked)
+                {
+                    if (partes.Length > 0)
+                    {
+
+                        if (int.TryParse(partes[0].Trim(), out registro))
+                        {
+                            FormShow(new f_EmitirHolerite(registro));
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Não foi possível converter o número de registro");
+
+                        }
+
+                    }
+
+
+                }
+
+                //else
+                //{
+
+                //    MessageBox.Show("Selecione um funcionário para atulizar", "Aviso", MessageBoxButtons.OK,
+                //                        MessageBoxIcon.Warning);
+
+                //}
+
+            }
+
+
+
+
+
+
+        }
+
+
+
+
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -167,7 +224,7 @@ namespace SisRH_Desktop
 
         private void btnEmitir_Click(object sender, EventArgs e)
         {
-            FormShow(new f_EmitirHolerite());
+            FuncionarioCheckEmitirHolerite();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -233,7 +290,7 @@ namespace SisRH_Desktop
         private void btnAtualizarDados_Click(object sender, EventArgs e)
         {
 
-            FuncionarioCheck();
+            FuncionarioCheckEditar();
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)

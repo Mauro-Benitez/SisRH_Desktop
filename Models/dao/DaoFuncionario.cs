@@ -18,7 +18,7 @@ namespace SisRH_Desktop.Models.dao
 
         private SqlConnection con;
         private SqlCommand cmd;
-
+        
         private readonly string url = @"Data Source=DESKTOP-DNIRGUH\SQLEXPRESS;Initial Catalog=BD_Funcionario;"
         + "Integrated Security=true;";
 
@@ -32,7 +32,7 @@ namespace SisRH_Desktop.Models.dao
 
                 String sql = "insert into TB_funcionario(nome,endereco,email,telefone, data_nascimento,data_contratacao,horas_mensais,valor_vt,valor_vr,nivel_acesso,senha,ativo,salario_bruto,cargo)" +
                     " values " +
-                    "(@nome,@endereco,@email,@telefone,@data_nascimento,@data_contratacao,@horas_mensais,@valor_vt,@valor_vr,@nivel_acesso,@senha,@ativo,@salario_bruto,@cargo) SET @RegistroRetorno = SCOPE_IDENTITY();;";
+                    "(@nome,@endereco,@email,@telefone,@data_nascimento,@data_contratacao,@horas_mensais,@valor_vt,@valor_vr,@nivel_acesso,@senha,@ativo,@salario_bruto,@cargo) SET @RegistroRetorno = SCOPE_IDENTITY();";
                 cmd = new SqlCommand(sql, con);
 
 

@@ -28,23 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Guilherme Bezerra",
-            "123456"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f_EmitirHolerite));
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnEmitir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.RM = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lvFuncionario = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // label9
@@ -53,66 +48,74 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(124)))), ((int)(((byte)(243)))));
-            this.label9.Location = new System.Drawing.Point(289, 20);
+            this.label9.Location = new System.Drawing.Point(385, 25);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 28);
+            this.label9.Size = new System.Drawing.Size(0, 35);
             this.label9.TabIndex = 76;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(474, -30);
+            this.label10.Location = new System.Drawing.Point(632, -37);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.Size = new System.Drawing.Size(0, 16);
             this.label10.TabIndex = 75;
             // 
             // textBox4
             // 
             this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(172, 402);
+            this.textBox4.Location = new System.Drawing.Point(229, 495);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(252, 27);
+            this.textBox4.Size = new System.Drawing.Size(335, 32);
             this.textBox4.TabIndex = 72;
             // 
             // textBox3
             // 
             this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(171, 358);
+            this.textBox3.Location = new System.Drawing.Point(228, 441);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(256, 27);
+            this.textBox3.Size = new System.Drawing.Size(340, 32);
             this.textBox3.TabIndex = 71;
             // 
-            // button7
+            // btnEmitir
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(124)))), ((int)(((byte)(243)))));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(265, 473);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(96, 32);
-            this.button7.TabIndex = 68;
-            this.button7.Text = "Emitir";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnEmitir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(124)))), ((int)(((byte)(243)))));
+            this.btnEmitir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEmitir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmitir.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmitir.ForeColor = System.Drawing.Color.White;
+            this.btnEmitir.Location = new System.Drawing.Point(304, 582);
+            this.btnEmitir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmitir.Name = "btnEmitir";
+            this.btnEmitir.Size = new System.Drawing.Size(128, 39);
+            this.btnEmitir.TabIndex = 68;
+            this.btnEmitir.Text = "Emitir";
+            this.btnEmitir.UseVisualStyleBackColor = false;
+            this.btnEmitir.Click += new System.EventHandler(this.btnEmitir_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(467, 20);
+            this.label3.Location = new System.Drawing.Point(623, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(0, 16);
             this.label3.TabIndex = 60;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(12, 361);
+            this.checkBox2.Location = new System.Drawing.Point(16, 444);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(160, 24);
+            this.checkBox2.Size = new System.Drawing.Size(201, 29);
             this.checkBox2.TabIndex = 78;
             this.checkBox2.Text = "Adicionar Comissão";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -122,9 +125,10 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(10, 405);
+            this.checkBox3.Location = new System.Drawing.Point(13, 498);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(159, 24);
+            this.checkBox3.Size = new System.Drawing.Size(199, 29);
             this.checkBox3.TabIndex = 79;
             this.checkBox3.Text = "Adicionar Desconto";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -136,39 +140,12 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(124)))), ((int)(((byte)(243)))));
-            this.label4.Location = new System.Drawing.Point(12, 54);
+            this.label4.Location = new System.Drawing.Point(24, 9);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 28);
+            this.label4.Size = new System.Drawing.Size(188, 35);
             this.label4.TabIndex = 80;
             this.label4.Text = "Emitir Holerite";
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Nome,
-            this.RM});
-            this.listView1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(7, 118);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(449, 204);
-            this.listView1.TabIndex = 81;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // Nome
-            // 
-            this.Nome.Text = "Nome";
-            this.Nome.Width = 382;
-            // 
-            // RM
-            // 
-            this.RM.Text = "RM";
-            this.RM.Width = 94;
             // 
             // btnCancelar
             // 
@@ -177,21 +154,31 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(111, 473);
+            this.btnCancelar.Location = new System.Drawing.Point(148, 582);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(96, 32);
+            this.btnCancelar.Size = new System.Drawing.Size(128, 39);
             this.btnCancelar.TabIndex = 82;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lvFuncionario
+            // 
+            this.lvFuncionario.HideSelection = false;
+            this.lvFuncionario.Location = new System.Drawing.Point(12, 102);
+            this.lvFuncionario.Name = "lvFuncionario";
+            this.lvFuncionario.Size = new System.Drawing.Size(593, 121);
+            this.lvFuncionario.TabIndex = 83;
+            this.lvFuncionario.UseCompatibleStateImageBehavior = false;
+            // 
             // f_EmitirHolerite
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 574);
+            this.ClientSize = new System.Drawing.Size(621, 718);
+            this.Controls.Add(this.lvFuncionario);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
@@ -199,10 +186,11 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnEmitir);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "f_EmitirHolerite";
             this.Text = "Sis.RH";
             this.Load += new System.EventHandler(this.f_EmitirHolerite_Load);
@@ -216,14 +204,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnEmitir;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader Nome;
-        private System.Windows.Forms.ColumnHeader RM;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ListView lvFuncionario;
     }
 }
