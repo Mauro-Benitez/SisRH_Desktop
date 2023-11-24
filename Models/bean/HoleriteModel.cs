@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using SisRH_Desktop.Enum;
+using SisRH_Desktop.Models.dao;
 
 namespace SisRH_Desktop.Model
 {
     public class HoleriteModel
     {
+        DaoHolerite daoHolerite = null;
+
         public int Id_Holerite { get;  set; }
         public FuncionarioModel Funcionario { get; set; }
+
         public DateTime Data_emissão = DateTime.Now;
 
         public EnumMes Mes_referencia = EnumMes.Novembro;
@@ -27,11 +31,18 @@ namespace SisRH_Desktop.Model
         public double Desconto_FGTS = 8.0;
 
         public double Desconto_VT = 5.0;
+        public TaxaModel Outras_Taxas { get; set; }
+
+        public HoleriteModel()
+        {
+        }
 
         public HoleriteModel(int id_Holerite)
         {
             Id_Holerite = id_Holerite;
             CalculoInss();
+            SalarioLiquido();
+            
         }
 
         public HoleriteModel(FuncionarioModel funcionario)
@@ -39,6 +50,9 @@ namespace SisRH_Desktop.Model
             Funcionario = funcionario;
             Salario_bruto = funcionario.salario_bruto;
             CalculoInss();
+            SalarioLiquido();
+            daoHolerite = new DaoHolerite();
+            Outras_Taxas = daoHolerite.HoleriteMaisTaxas(funcionario);
         }
 
         private void CalculoInss()
@@ -69,7 +83,8 @@ namespace SisRH_Desktop.Model
         {
             double inss = Desconto_INSS;
             double salarioBruto = Funcionario.salario_bruto;
-            double desconto = salarioBruto * inss;
+
+            double desconto = salarioBruto * inss/100;
 
             return desconto;
         }
@@ -87,7 +102,8 @@ namespace SisRH_Desktop.Model
         {
             double VT = Desconto_VT;
             double salarioBruto = Funcionario.salario_bruto;
-            double desconto = salarioBruto * Desconto_VT;
+
+            double desconto = salarioBruto * VT/100;
 
             return desconto;
         }
@@ -101,7 +117,7 @@ namespace SisRH_Desktop.Model
         public void SalarioLiquido()
         {
 
-            Salario_bruto = Funcionario.salario_bruto - ValorTotalDescontos();
+            salario_liquido = Salario_bruto - ValorTotalDescontos();
 
         }
        

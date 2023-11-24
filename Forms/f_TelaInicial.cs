@@ -21,6 +21,7 @@ namespace SisRH_Desktop
         private Form FormAtivo;
         string login;
         string senha;
+        FuncionarioModel funcionariioLogado = null;
 
 
         public f_TelaInicial()
@@ -43,7 +44,7 @@ namespace SisRH_Desktop
             lblNome.Text = funSaida.nome;
             lblCargo.Text = funSaida.cargo;
 
-
+            funcionariioLogado = funSaida;
 
 
         }
@@ -198,19 +199,23 @@ namespace SisRH_Desktop
             
         }
 
-        private void pictureBox1_Click_4(object sender, EventArgs e)
-        {
-            FormShow(new f_Perfil2(login,senha));
-            foreach (Control ctrl in panelPrincipal.Controls)
-            {
-                ctrl.BackColor = BackColor = Color.FromArgb(56, 58, 99);
-
-            }
-        }
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void pbImagemLogin_Click(object sender, EventArgs e)
+        {
+            
+                FormShow(new f_Perfil2(login,senha));
+                foreach (Control ctrl in panelPrincipal.Controls)
+                {
+                    ctrl.BackColor = BackColor = Color.FromArgb(56, 58, 99);
+
+                }
+            
+
         }
     }
 }

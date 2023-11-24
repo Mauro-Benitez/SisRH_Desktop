@@ -141,16 +141,6 @@ namespace SisRH_Desktop.Models.dao
                         (EnumAcessos)listaFuncionarios.GetInt32(4), (EnumAtivo)listaFuncionarios.GetInt32(5));
 
 
-                    //funcSaida = new FuncionarioModel(listaFuncionarios.GetInt32(0), listaFuncionarios.GetString(1), listaFuncionarios.GetString(2),
-                    //                                 (EnumAcessos)listaFuncionarios.GetInt32(3), (EnumAtivo)listaFuncionarios.GetInt32(4),listaFuncionarios.GetString(5));
-
-
-                    //funcSaida = new FuncionarioModel(listaFuncionarios.GetInt32(0),listaFuncionarios.GetString(1), listaFuncionarios.GetString(2),
-                    //    listaFuncionarios.GetString(3), listaFuncionarios.GetString(4), listaFuncionarios.GetDateTime(5),
-                    //    listaFuncionarios.GetDateTime(6), listaFuncionarios.GetInt32(7), (double)listaFuncionarios.GetDecimal(8),
-                    //    (double)listaFuncionarios.GetDecimal(9), (double)listaFuncionarios.GetDecimal(10), listaFuncionarios.GetInt32(11),
-                    //    listaFuncionarios.GetString(11), listaFuncionarios.GetInt32(12), listaFuncionarios.GetString(13));
-
                     listaFunSaida.Add(funcSaida);
                 }
 
@@ -170,6 +160,50 @@ namespace SisRH_Desktop.Models.dao
             }
 
             return listaFunSaida;
+        }
+
+        public FuncionarioModel BuscarPorRegistro(FuncionarioModel funcEntrada)
+        {
+            FuncionarioModel funcSaida = new FuncionarioModel(); ;
+            //FuncionarioModel listaFunSaida = new FuncionarioModel();
+
+            try
+            {
+
+                // Conexao
+                con = new SqlConnection(url);
+                String sql = "select registro, nome, email, cargo, nivel_acesso, ativo from TB_funcionario where registro like @registro and ativo = 1";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@registro", funcEntrada.registro );
+                con.Open();
+                SqlDataReader listaFuncionarios = cmd.ExecuteReader();
+
+                while (listaFuncionarios.Read())
+                {
+                    funcSaida = new FuncionarioModel(listaFuncionarios.GetInt32(0), listaFuncionarios.GetString(1),
+                        listaFuncionarios.GetString(2), listaFuncionarios.GetString(3),
+                        (EnumAcessos)listaFuncionarios.GetInt32(4), (EnumAtivo)listaFuncionarios.GetInt32(5));
+
+
+                    
+                }
+
+
+
+
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw ex;
+            }
+
+            finally
+            {
+                con.Close();
+            }
+
+            return funcSaida;
         }
 
 

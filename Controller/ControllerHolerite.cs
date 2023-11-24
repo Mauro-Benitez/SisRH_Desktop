@@ -12,8 +12,8 @@ namespace SisRH_Desktop.Controller
     {
         DaoHolerite daoholerite = null;
         DaoFuncionario daoFuncionario = null;
-
-
+        DaoTaxa daoTaxa = null;
+        DaoRelatorio daoRelatorio=null;
 
         public HoleriteModel GerarHolerite (FuncionarioModel funEntrada)
         {
@@ -26,10 +26,20 @@ namespace SisRH_Desktop.Controller
 
             HoleriteModel holeriteSaida = daoholerite.InserirDados(holeriteEntrada, funSaida);
 
-            return holeriteEntrada;
+            return holeriteSaida;
 
         }
 
+        public List<TaxaModel> gerarTaxaComHolerite(FuncionarioModel funEntrada)
+        {
+            daoTaxa = new DaoTaxa();
+            daoRelatorio = new DaoRelatorio();
+
+            List<TaxaModel> taxaSaida = daoRelatorio.HoleriteMaisTaxas(funEntrada);
+
+
+            return taxaSaida;
+        }
 
 
 

@@ -1,5 +1,6 @@
 ﻿using SisRH_Desktop.Controller;
 using SisRH_Desktop.Model;
+using SisRH_Desktop.Models.dao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,47 +10,65 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tela_Login_Sis_RH;
 
 namespace SisRH_Desktop.View.forms
 {
     public partial class f_Perfil2 : Form
     {
-        public f_Perfil2(string email, string senha)
+        string login;
+        string senha;
+
+
+        public f_Perfil2(string login,string senha)
         {
-            CarregarDados(email, senha);
             InitializeComponent();
+            this.login = login;
+            this.senha = senha;
+            CarregarDados();
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
-        private void CarregarDados(string email, string senha)
+        private void CarregarDados()
         {
-
-            ControllerFuncionario ContFuncionario = new ControllerFuncionario();
-            FuncionarioModel funEntrada = new FuncionarioModel(email, senha);
-            FuncionarioModel funcionario = ContFuncionario.CarregarDadosLogado(funEntrada);
-            txtNome.Text = funcionario.nome;
-            txtCargo.Text = funcionario.cargo;
-            txtEndereco.Text = funcionario.endereco;
-            txtEmail.Text = funcionario.email;            
-            txtTelefone.Text = funcionario.telefone;
-            dtNascimento.Value = funcionario.data_nascimento;
-            dtContratacao.Value = funcionario.data_contratacao;
-            txtHoras.Text = funcionario.horas_mensais.ToString();
-            txtSalario.Text = funcionario.salario_bruto.ToString();
-            txtVR.Text = funcionario.valor_vr.ToString();
-            txtVT.Text = funcionario.valor_vt.ToString();
-            txtAtivo.Text = funcionario.ativo.ToString();
-            txtNivel.Text = funcionario.nivel_acesso.ToString();
-
-
-            int nivelAcesso = (int)funcionario.nivel_acesso;
-
-            if (nivelAcesso == 1)
+            try
             {
-                checkBoxAcesso.Checked = true;
+                FuncionarioModel funEntrada = new FuncionarioModel(login, senha);
+                ControllerFuncionario controllerFuncionario = new ControllerFuncionario();
+                FuncionarioModel funSaida = controllerFuncionario.CarregarDadosLogado(funEntrada);
+                
+                txtNome.Text = funSaida.nome;
+                txtCargo.Text = funSaida.cargo;
+                txtEndereco.Text = funSaida.endereco;              
+                txtEmail.Text = funSaida.email;
+                txtTelefone.Text = funSaida.telefone;
+                dtNascimento.Value = funSaida.data_nascimento;
+                dtContratacao.Value = funSaida.data_contratacao;
+                txtHoras.Text = funSaida.horas_mensais.ToString();
+                txtSalario.Text =  funSaida.salario_bruto.ToString("f2");
+                txtVR.Text = funSaida.valor_vr.ToString("f2");
+                txtVT.Text = funSaida.valor_vt.ToString("f2");
+                txtAtivo.Text = funSaida.ativo.ToString();
+                txtNivel.Text = funSaida.nivel_acesso.ToString();
+                txtRegistro.Text = funSaida.registro.ToString();
+
+
+                int nivelAcesso = (int)funSaida.nivel_acesso;
+
+                if (nivelAcesso == 1)
+                {
+                    checkBoxAcesso.Checked = true;
+                }
+
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
 

@@ -108,9 +108,12 @@
     <Compile Include="Config\Conexao.cs" />
     <Compile Include="Controller\ControllerFuncionario.cs" />
     <Compile Include="Controller\ControllerHolerite.cs" />
+    <Compile Include="Controller\ControllerTaxa.cs" />
+    <Compile Include="Controller\ControllerRelatorio.cs" />
     <Compile Include="Enum\EnumAcessos.cs" />
     <Compile Include="Enum\EnumAtivo.cs" />
     <Compile Include="Enum\EnumMes.cs" />
+    <Compile Include="Enum\EnumTipo.cs" />
     <Compile Include="Forms\Form_Esqueci_Senha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,12 +199,14 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\bean\AutomacaoModel.cs" />
-    <Compile Include="Models\bean\CalculoModel.cs" />
+    <Compile Include="Models\bean\RelatorioModel.cs" />
     <Compile Include="Models\bean\FuncionarioModel.cs" />
     <Compile Include="Models\bean\HoleriteModel.cs" />
     <Compile Include="Models\bean\TaxaModel.cs" />
     <Compile Include="Models\dao\DaoFuncionario.cs" />
     <Compile Include="Models\dao\DaoHolerite.cs" />
+    <Compile Include="Models\dao\DaoRelatorio.cs" />
+    <Compile Include="Models\dao\DaoTaxa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Form_Esqueci_Senha.resx">

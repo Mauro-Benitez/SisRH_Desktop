@@ -2,7 +2,7 @@
 CREATE DATABASE BD_Funcionario;
 
 
-//tabela
+//tabela funcionario
 CREATE TABLE TB_funcionario (
     registro int IDENTITY(1,1) PRIMARY KEY,
 	nome varchar(255),	
@@ -57,3 +57,37 @@ CREATE TABLE TB_funcionario (
 	*Após o insert acessar o sistema com o seguinte login
 	//login= Admin
 	//Senha = admin
+
+
+
+	//criação da tabela holerite e associando com a tabela de funcionarios 
+
+	create table TB_Holerite  (
+    id_holerite INT IDENTITY(1,1) PRIMARY KEY,
+    id_funcionario int,
+	nome_funcionario varchar(250),
+	data_emissao date,
+	mes_referencia int,
+	dias_trabalhados int,
+    SalarioBruto DECIMAL(10, 2),
+	SalarioLiquido DECIMAL(10, 2),
+	nome_empresa varchar(250),
+	desconto_inss FLOAT,
+	desconto_fgts FLOAT,
+	desconto_vt FLOAT,
+	 FOREIGN KEY (id_funcionario) REFERENCES TB_funcionario(registro)
+	);
+
+
+	//tabela taxa e associando com a tabela de funcionarios 
+
+	create table TB_Taxa  (
+	id_Taxa INT IDENTITY(1,1) PRIMARY KEY,
+    id_Funcionario int,
+	nome_taxa varchar(250),
+	tipo varchar(250),
+	Valor DECIMAL(10, 2),
+	ValorPosTaxa DECIMAL,
+	porcentagem_taxa FLOAT,
+	FOREIGN KEY (id_Funcionario) REFERENCES TB_funcionario(registro)
+	);

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtRegistro = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtNivel = new System.Windows.Forms.TextBox();
             this.txtAtivo = new System.Windows.Forms.TextBox();
@@ -64,8 +66,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnDesativar = new System.Windows.Forms.Button();
-            this.txtRegistro = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -112,6 +112,25 @@
             this.panel1.Size = new System.Drawing.Size(600, 529);
             this.panel1.TabIndex = 60;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(103, 736);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(84, 25);
+            this.label17.TabIndex = 91;
+            this.label17.Text = "Registro:";
+            // 
+            // txtRegistro
+            // 
+            this.txtRegistro.Enabled = false;
+            this.txtRegistro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegistro.Location = new System.Drawing.Point(185, 734);
+            this.txtRegistro.Name = "txtRegistro";
+            this.txtRegistro.Size = new System.Drawing.Size(256, 32);
+            this.txtRegistro.TabIndex = 90;
             // 
             // label16
             // 
@@ -190,11 +209,11 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(44, 681);
+            this.label13.Location = new System.Drawing.Point(20, 682);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(147, 25);
+            this.label13.Size = new System.Drawing.Size(173, 25);
             this.label13.TabIndex = 81;
-            this.label13.Text = "Vale Transporte:";
+            this.label13.Text = "Vale Transporte: R$";
             // 
             // txtVR
             // 
@@ -208,11 +227,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(58, 644);
+            this.label12.Location = new System.Drawing.Point(40, 644);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(128, 25);
+            this.label12.Size = new System.Drawing.Size(154, 25);
             this.label12.TabIndex = 79;
-            this.label12.Text = "Vale Refeição:";
+            this.label12.Text = "Vale Refeição: R$";
             // 
             // txtSalarioBruto
             // 
@@ -226,11 +245,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(65, 598);
+            this.label11.Location = new System.Drawing.Point(43, 600);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 25);
+            this.label11.Size = new System.Drawing.Size(151, 25);
             this.label11.TabIndex = 77;
-            this.label11.Text = "Salario Bruto:";
+            this.label11.Text = "Salario Bruto: R$";
             // 
             // txtHoras
             // 
@@ -454,25 +473,6 @@
             this.btnDesativar.UseMnemonic = false;
             this.btnDesativar.UseVisualStyleBackColor = false;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
-            // 
-            // txtRegistro
-            // 
-            this.txtRegistro.Enabled = false;
-            this.txtRegistro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegistro.Location = new System.Drawing.Point(185, 734);
-            this.txtRegistro.Name = "txtRegistro";
-            this.txtRegistro.Size = new System.Drawing.Size(256, 32);
-            this.txtRegistro.TabIndex = 90;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(103, 736);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 25);
-            this.label17.TabIndex = 91;
-            this.label17.Text = "Registro:";
             // 
             // f_AtualizarColaborador
             // 

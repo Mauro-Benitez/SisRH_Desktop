@@ -30,6 +30,13 @@
         {
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtRegistro = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtNivel = new System.Windows.Forms.TextBox();
+            this.txtAtivo = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.checkBoxAcesso = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dtNascimento = new System.Windows.Forms.DateTimePicker();
@@ -53,13 +60,6 @@
             this.txtVR = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtRegistro = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtNivel = new System.Windows.Forms.TextBox();
-            this.txtAtivo = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkBoxAcesso = new System.Windows.Forms.CheckBox();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -112,6 +112,73 @@
             this.panel1.Size = new System.Drawing.Size(682, 575);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(104, 737);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(84, 25);
+            this.label17.TabIndex = 98;
+            this.label17.Text = "Registro:";
+            // 
+            // txtRegistro
+            // 
+            this.txtRegistro.Enabled = false;
+            this.txtRegistro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegistro.Location = new System.Drawing.Point(190, 735);
+            this.txtRegistro.Name = "txtRegistro";
+            this.txtRegistro.Size = new System.Drawing.Size(256, 32);
+            this.txtRegistro.TabIndex = 97;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(125, 776);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 25);
+            this.label16.TabIndex = 96;
+            this.label16.Text = "Nivel:";
+            // 
+            // txtNivel
+            // 
+            this.txtNivel.Enabled = false;
+            this.txtNivel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNivel.Location = new System.Drawing.Point(190, 773);
+            this.txtNivel.Name = "txtNivel";
+            this.txtNivel.Size = new System.Drawing.Size(256, 32);
+            this.txtNivel.TabIndex = 95;
+            // 
+            // txtAtivo
+            // 
+            this.txtAtivo.Enabled = false;
+            this.txtAtivo.Location = new System.Drawing.Point(378, 835);
+            this.txtAtivo.Name = "txtAtivo";
+            this.txtAtivo.Size = new System.Drawing.Size(67, 22);
+            this.txtAtivo.TabIndex = 94;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.label15.Location = new System.Drawing.Point(305, 833);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(91, 29);
+            this.label15.TabIndex = 93;
+            this.label15.Text = "Ativo =";
+            // 
+            // checkBoxAcesso
+            // 
+            this.checkBoxAcesso.AutoSize = true;
+            this.checkBoxAcesso.Enabled = false;
+            this.checkBoxAcesso.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxAcesso.Location = new System.Drawing.Point(82, 833);
+            this.checkBoxAcesso.Name = "checkBoxAcesso";
+            this.checkBoxAcesso.Size = new System.Drawing.Size(152, 29);
+            this.checkBoxAcesso.TabIndex = 92;
+            this.checkBoxAcesso.Text = "Acesso Admin";
+            this.checkBoxAcesso.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -187,7 +254,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 204);
+            this.label1.Location = new System.Drawing.Point(127, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 25);
             this.label1.TabIndex = 59;
@@ -248,11 +315,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 544);
+            this.label3.Location = new System.Drawing.Point(43, 545);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 25);
+            this.label3.Size = new System.Drawing.Size(156, 25);
             this.label3.TabIndex = 30;
-            this.label3.Text = "Salário Bruto:";
+            this.label3.Text = "Salário Bruto:  R$";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtVT
@@ -269,11 +336,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(72, 593);
+            this.label4.Location = new System.Drawing.Point(40, 593);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 25);
+            this.label4.Size = new System.Drawing.Size(154, 25);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Vale Refeição:";
+            this.label4.Text = "Vale Refeição: R$";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtSalario
@@ -290,11 +357,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(68, 643);
+            this.label5.Location = new System.Drawing.Point(23, 642);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 25);
+            this.label5.Size = new System.Drawing.Size(173, 25);
             this.label5.TabIndex = 32;
-            this.label5.Text = "Vale Transporte:";
+            this.label5.Text = "Vale Transporte: R$";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtHoras
@@ -311,7 +378,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(74, 680);
+            this.label6.Location = new System.Drawing.Point(74, 681);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 25);
             this.label6.TabIndex = 33;
@@ -346,73 +413,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(246, 32);
             this.txtNome.TabIndex = 36;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(104, 737);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 25);
-            this.label17.TabIndex = 98;
-            this.label17.Text = "Registro:";
-            // 
-            // txtRegistro
-            // 
-            this.txtRegistro.Enabled = false;
-            this.txtRegistro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegistro.Location = new System.Drawing.Point(190, 735);
-            this.txtRegistro.Name = "txtRegistro";
-            this.txtRegistro.Size = new System.Drawing.Size(256, 32);
-            this.txtRegistro.TabIndex = 97;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(125, 776);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 25);
-            this.label16.TabIndex = 96;
-            this.label16.Text = "Nivel:";
-            // 
-            // txtNivel
-            // 
-            this.txtNivel.Enabled = false;
-            this.txtNivel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNivel.Location = new System.Drawing.Point(190, 773);
-            this.txtNivel.Name = "txtNivel";
-            this.txtNivel.Size = new System.Drawing.Size(256, 32);
-            this.txtNivel.TabIndex = 95;
-            // 
-            // txtAtivo
-            // 
-            this.txtAtivo.Enabled = false;
-            this.txtAtivo.Location = new System.Drawing.Point(378, 835);
-            this.txtAtivo.Name = "txtAtivo";
-            this.txtAtivo.Size = new System.Drawing.Size(67, 22);
-            this.txtAtivo.TabIndex = 94;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
-            this.label15.Location = new System.Drawing.Point(305, 833);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(91, 29);
-            this.label15.TabIndex = 93;
-            this.label15.Text = "Ativo =";
-            // 
-            // checkBoxAcesso
-            // 
-            this.checkBoxAcesso.AutoSize = true;
-            this.checkBoxAcesso.Enabled = false;
-            this.checkBoxAcesso.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAcesso.Location = new System.Drawing.Point(82, 833);
-            this.checkBoxAcesso.Name = "checkBoxAcesso";
-            this.checkBoxAcesso.Size = new System.Drawing.Size(152, 29);
-            this.checkBoxAcesso.TabIndex = 92;
-            this.checkBoxAcesso.Text = "Acesso Admin";
-            this.checkBoxAcesso.UseVisualStyleBackColor = true;
             // 
             // f_Perfil2
             // 

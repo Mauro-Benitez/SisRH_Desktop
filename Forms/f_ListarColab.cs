@@ -238,53 +238,99 @@ namespace SisRH_Desktop
         {                             
     
         }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void buscarFuncionario()
         {
-           
+
             if (txtNome.Text != string.Empty)
             {
-                FuncionarioModel funcEntrada = new FuncionarioModel(txtNome.Text);
 
-                try
+                if (int.TryParse(txtNome.Text, out int registro))
                 {
-
-                    ControllerFuncionario contFuncionario = new ControllerFuncionario();
-                    var listaFuncionario = contFuncionario.ListarPorNome(funcEntrada);
-                    lvFuncionario.Items.Clear();
-                    foreach (FuncionarioModel resultado in listaFuncionario)
+                    FuncionarioModel funcEntrada = new FuncionarioModel(registro);
+                    
+                    try
                     {
 
-                        lvFuncionario.Items.Add(new ListViewItem(new string[]
-                        {   resultado.registro.ToString(),
-                        resultado.nome,
-                        resultado.email,
-                        resultado.cargo,
-                        resultado.nivel_acesso.ToString(),
-                        resultado.ativo.ToString()
+                        ControllerFuncionario contFuncionario = new ControllerFuncionario();
+                        FuncionarioModel Funsaida = contFuncionario.BuscarPorRegistro(funcEntrada);
+                        lvFuncionario.Items.Clear();
+                        
+                            lvFuncionario.Items.Add(new ListViewItem(new string[]
+                            {   Funsaida.registro.ToString(),
+                                Funsaida.nome,
+                                Funsaida.email,
+                                Funsaida.cargo,
+                                Funsaida.nivel_acesso.ToString(),
+                                Funsaida.ativo.ToString()
 
-                        }));
-                       
-                    };
+                            }));
 
+                        
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+
+
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    FuncionarioModel funcEntrada = new FuncionarioModel(txtNome.Text);
+
+                    try
+                    {
+
+                        ControllerFuncionario contFuncionario = new ControllerFuncionario();
+                        var listaFuncionario = contFuncionario.ListarPorNome(funcEntrada);
+                        lvFuncionario.Items.Clear();
+                        foreach (FuncionarioModel resultado in listaFuncionario)
+                        {
+
+                            lvFuncionario.Items.Add(new ListViewItem(new string[]
+                            {   resultado.registro.ToString(),
+                                resultado.nome,
+                                resultado.email,
+                                resultado.cargo,
+                                resultado.nivel_acesso.ToString(),
+                                resultado.ativo.ToString()
+
+                            }));
+
+                        };
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
 
 
+                    }
                 }
+
+
+
             }
 
             else
             {
-                MessageBox.Show("Nenhum dado inserido");
+                MessageBox.Show("Nenhum dado inserido","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                CarregarTodosFuncionarios();
+
             }
-            
-                
-           
 
            
+
+
+
+
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            buscarFuncionario();
+
         }
 
         private void btnAtualizarDados_Click(object sender, EventArgs e)
@@ -310,6 +356,24 @@ namespace SisRH_Desktop
                     }
                 }
             }
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                buscarFuncionario();
+
+                e.Handled = true;
+            }
+
+
         }
     }
 }

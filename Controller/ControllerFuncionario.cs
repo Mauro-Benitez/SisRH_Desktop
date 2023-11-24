@@ -43,6 +43,13 @@ namespace SisRH_Desktop.Controller
             return listaSaida;
         }
 
+        public FuncionarioModel BuscarPorRegistro (FuncionarioModel funcEntrada)
+        {
+            DaoFuncionario = new DaoFuncionario();
+            FuncionarioModel funSaida = DaoFuncionario.BuscarPorRegistro(funcEntrada);
+            return funSaida;
+        }
+
         public FuncionarioModel CarregarTodosOsDados(int registro)
         {
             DaoFuncionario = new DaoFuncionario();

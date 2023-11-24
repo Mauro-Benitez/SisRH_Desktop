@@ -1,4 +1,7 @@
-﻿using System;
+﻿using SisRH_Desktop.Controller;
+using SisRH_Desktop.Enum;
+using SisRH_Desktop.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -60,6 +63,52 @@ namespace SisRH_Desktop
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNomeTaxa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ControllerFuncionario Controllerfuncionario = new ControllerFuncionario();              
+                ControllerTaxa controllerTaxa = new ControllerTaxa();
+
+
+               
+
+                FuncionarioModel funcEntrada = new FuncionarioModel(6);
+
+                FuncionarioModel funcionario = Controllerfuncionario.BuscarPorRegistro(funcEntrada);
+
+                
+
+                EnumTipo tipo = EnumTipo.Acresimo;
+            
+
+                TaxaModel taxa = new TaxaModel("taxa teste", 2.0, tipo, funcionario);
+                controllerTaxa.adicionarTaxa(taxa, funcionario);
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                MessageBox.Show("EXITO");
+            }
+          
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SisRH_Desktop.Models.dao
 {
@@ -69,6 +70,55 @@ namespace SisRH_Desktop.Models.dao
 
 
         }
+
+        public TaxaModel HoleriteMaisTaxas(FuncionarioModel funcionarioEntrada)
+        {
+           
+            TaxaModel taxaModelSaida = null;
+            try
+            {
+
+                // Conexao
+                con = new SqlConnection(url);
+                String sql = @" SELECT 
+                              
+                              t.id_Taxa AS ID_Taxa,
+                              t.nome_taxa AS Nome_Taxa,
+                              t.Valor AS Valor,
+	                          t.ValorPosTaxa AS ValorPosTaxa,
+                              t.porcentagem_taxa AS Porcentagem_Taxa
+                                FROM 
+                                TB_funcionario f
+                                LEFT JOIN 
+                                TB_Holerite h ON f.registro = h.id_funcionario
+                                LEFT JOIN 
+                                TB_Taxa t ON f.registro = t.id_Funcionario
+                                WHERE 
+                                f.registro =@registro;";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@registro", funcionarioEntrada.registro);
+                con.Open();
+                SqlDataReader relatorio = cmd.ExecuteReader();
+
+                while (relatorio.Read())
+                {
+                    taxaModelSaida = new TaxaModel(relatorio.GetInt32(0), relatorio.GetString(1),
+                    (double)relatorio.GetDecimal(2), (double)relatorio.GetDecimal(3), (double)relatorio.GetFloat(4));
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return taxaModelSaida;
+        }
+
+
 
 
 

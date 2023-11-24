@@ -31,5 +31,10 @@ namespace SisRH_Desktop
         {
 
         }
+
+        private void f_CadColaborador2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

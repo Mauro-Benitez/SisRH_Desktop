@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f_TelaInicial));
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbImagemLogin = new System.Windows.Forms.PictureBox();
             this.lblCargo = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.btnTaxas = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelPrincipal.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemLogin)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel_form.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -70,7 +70,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(96)))));
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pbImagemLogin);
             this.panel2.Controls.Add(this.lblCargo);
             this.panel2.Controls.Add(this.lblNome);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
@@ -82,18 +82,18 @@
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
             // 
-            // pictureBox1
+            // pbImagemLogin
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::SisRH_Desktop.Properties.Resources.icon_perfil_108;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_4);
+            this.pbImagemLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pbImagemLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbImagemLogin.Image = global::SisRH_Desktop.Properties.Resources.icon_perfil_108;
+            this.pbImagemLogin.Location = new System.Drawing.Point(3, 12);
+            this.pbImagemLogin.Name = "pbImagemLogin";
+            this.pbImagemLogin.Size = new System.Drawing.Size(84, 82);
+            this.pbImagemLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImagemLogin.TabIndex = 2;
+            this.pbImagemLogin.TabStop = false;
+            this.pbImagemLogin.Click += new System.EventHandler(this.pbImagemLogin_Click);
             // 
             // lblCargo
             // 
@@ -294,7 +294,7 @@
             this.Load += new System.EventHandler(this.f_TelaInicial_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemLogin)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel_form.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -314,7 +314,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel_form;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbImagemLogin;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Label lblNome;

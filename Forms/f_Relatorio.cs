@@ -21,5 +21,10 @@ namespace SisRH_Desktop
         {
 
         }
+
+        private void f_Relatorio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

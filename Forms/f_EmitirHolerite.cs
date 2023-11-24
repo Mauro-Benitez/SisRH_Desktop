@@ -17,13 +17,21 @@ using iTextSharp.text.pdf;
 using iTextSharp.text;
 using System.Globalization;
 using System.Diagnostics;
+using System.Data.SqlClient;
+using System.Security.Policy;
 
 namespace SisRH_Desktop
 {
     public partial class f_EmitirHolerite : Form
     {
         int registroFuncionario;
-       
+        private SqlConnection con;
+        private SqlCommand cmd;
+
+        private readonly string url = @"Data Source=DESKTOP-DNIRGUH\SQLEXPRESS;Initial Catalog=BD_Funcionario;"
+        + "Integrated Security=true;";
+
+
 
         public f_EmitirHolerite(int registro)
         {
@@ -107,13 +115,21 @@ namespace SisRH_Desktop
         {
             try
             {
-
+               
                 ControllerFuncionario contFuncionario = new ControllerFuncionario();
                 FuncionarioModel funSaida = contFuncionario.CarregarTodosOsDados(registroFuncionario);
+
                 ControllerHolerite contHolerite = new ControllerHolerite();
+                ControllerRelatorio controllerRelatorio = new ControllerRelatorio();
+               
+                //   TaxaModel taxaSaida = new TaxaModel();
 
-
+                //TaxaModel taxaModel = controllerRelatorio.GerarHoleiteComTaxa(funSaida);
                 HoleriteModel HoleriteGerado = contHolerite.GerarHolerite(funSaida);
+                //TaxaModel taxaModel = null;
+
+                //taxaModel = controllerRelatorio.GerarHoleiteComTaxa(funSaida);
+               
 
 
                 //criando um  pdf do holerite
@@ -166,9 +182,9 @@ namespace SisRH_Desktop
 
 
                     tabela.AddCell($"Código \n {HoleriteGerado.Id_Holerite.ToString()}");
-                    tabela.AddCell($"Descrição \n Salario \n INSS");
-                    tabela.AddCell($"Referência\n {HoleriteGerado.Dias_trabalhados.ToString()} d \n {HoleriteGerado.Desconto_FGTS} %");
-                    tabela.AddCell($"Proventos\n {HoleriteGerado.Salario_bruto.ToString("f2", CultureInfo.InvariantCulture)}");
+                    tabela.AddCell($"Descrição \n Salario \n INSS \n ");
+                    tabela.AddCell($"Referência\n {HoleriteGerado.Dias_trabalhados.ToString()} d \n {HoleriteGerado.Desconto_INSS} % \n  %"); //{taxa.taxa.Porcentagem}
+                    tabela.AddCell($"Proventos\n {HoleriteGerado.Salario_bruto.ToString("f2", CultureInfo.InvariantCulture)} \n "); //{taxa.taxa.Valor.ToString("f2")}
                     tabela.AddCell($"Descontos \n \n {HoleriteGerado.ValorDescontoFGTS().ToString("f2", CultureInfo.InvariantCulture)}");
 
 
